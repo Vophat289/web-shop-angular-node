@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 
+//doc file .env
 dotenv.config();
 
 const app = express();
@@ -21,7 +22,7 @@ app.get("/", (req, res) => {
   res.send("Backend da duoc ket noi voi MongoDb");
 });
 
-//lang nghe cong
+//lang nghe cong 3000
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server dang chay tren Port: ${PORT}`);
