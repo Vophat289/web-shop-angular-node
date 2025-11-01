@@ -1,0 +1,16 @@
+services:
+  backend:
+    build: .
+    container_name: webshop-backend
+    restart: always
+    ports:
+      - "4000:3000" # <== bên ngoài dùng 4000, trong container vẫn 3000
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    volumes:
+      - .:/app
+      - /app/node_modules
+  
